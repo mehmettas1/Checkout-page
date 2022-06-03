@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Checkout Form</title>
+</head>
+<body>
+    <header>Checkout</header>
+    <main>
+        <div class="cart">
+            <div class="top">
+                <div class="backbag">
+                    <div class="left">
+                        <img src="./images/photo1.png" alt="backbag">
+                    </div>
+                    <div class="right">
+                        <div class="item">
+                            <p>Vintage Backbag</p>
+                            <p>$54.99 <span><del>$94.99</del></span></p>
+                        </div>
+                        <div class="counter">
+                            <i class="fa-solid fa-plus plus"></i>
+                            <p class="amount">1</p>
+                            <i class="fa-solid fa-minus minus"></i>
+                        </div>
+                        <div class="remove">Remove</div>
+                    </div>
+                </div>
+                <div class="backbag">
+                    <div class="left">
+                        <img src="./images/photo2.png" alt="backbag">
+                    </div>
+                    <div class="right">
+                        <div class="item">
+                            <p>Levi Shoes</p>
+                            <p>$74.99 <span><del>$124.99</del></span></p>
+                            
+                        </div>
+                        <div class="counter">
+                            <i class="fa-solid fa-plus"></i>
+                            <p class="amount">1</p>
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="remove">Remove</div>
+                    </div>
+                </div>
+            </div>
+            <bottom>
+                <div class="shipping">
+                    <p>Shipping</p>
+                    <p>$19</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p>$148.98</p>
+                </div>
+            </bottom>
+        </div>
+        <form action="">
+            <div class="contact">
+                <h2>Contact Information</h2>
+                <div class="upper-input">
+                    <label for="email">Email</label>
+                    <div class="input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="upper-input">
+                    <label for="phone">Phone</label>
+                    <div class="input">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone" required>
+                    </div>
+                </div>
+            </div>
+            <div class="shipping-address">
+                <h2>Shipping Address</h2>
+                <div class="upper-input">
+                    <label for="fname">Full Name</label>
+                    <div class="input">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" id="fname" placeholder="Enter your Full name" required>
+                    </div>
+                </div>
+                <div class="upper-input">
+                    <label for="address">Address</label>
+                    <div class="input">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <input type="text" name="address" id="address" placeholder="Enter your address" required>
+                    </div>
+                </div>
+                <div class="upper-input">
+                    <label for="city">City</label>
+                    <div class="input">
+                        <i class="fa-solid fa-city"></i>
+                        <input type="text" name="city" id="city" placeholder="Enter your city" required>
+                    </div>
+                </div>
+                <div class="double">
+                    <div class="country">
+                        <label for="country">Country</label>
+                        <div class="input">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            <select name="country" id="country">
+                                <option value="usa">USA</option>
+                                <option value="germany">Germany</option>
+                                <option value="france">France</option>
+                                <option value="spain">Spain</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="post-code">
+                        <label for="post-code">Post Code</label>
+                        <div class="input">
+                            <i class="fa-solid fa-envelopes-bulk"></i>
+                            <input type="number" name="post-code" id="post-code" placeholder="Enter your postal code" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="approve">
+                <input type="checkbox" name="approve" id="approve">
+                <label for="">See this information next time</label>
+            </div>
+            <div class="submit">
+
+                <button type="submit" onclick="mailValidator()">Continue</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

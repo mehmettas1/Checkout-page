@@ -49,6 +49,46 @@ productsDiv.addEventListener(".click",(event) => {
     }
    });
     
+   //calculate cart and product totals
+const calculateProductAndCartTotal = (productInfoDiv) =>{
+    //product calculation
+    // console.log(productInfoDiv);
+    let price = productInfoDiv.querySelector("strong").innerText;
+    let quantity = productInfoDiv.querySelector("#product-quantity").innerText;
+    let productTotalDiv = productInfoDiv.querySelector(".product-line-price");
+    productTotalDiv.innerText = (price * quantity).toFixed(2);
+    //cart calculation
+    calculateCartTotal();
+    }
+    
+    //calculate cart totals
+    const calculateCartTotal = () =>{
+        //nodeList Div
+        let productsTotalPriceDivs = document.querySelectorAll(".product-line-price");
+        // console.log(productsTotalPriceDivs);
+        let subtotal = 0;
+        productsTotalPriceDivs.forEach(eachProductTotalDiv=>{
+            subtotal += parseFloat(eachProductTotalDiv.innerText)
+        });
+        console.log(subtotal);
+        let taxPrice = subtotal * localStorage.getItem("taxRate");
+        console.log(taxPrice);
+    
+        let shippingPrice = (subtotal > 0 ? parseFloat(localStorage.getItem("shippingPrice")) : 0);
+    
+        let cartTotal = subtotal + taxPrice + shippingPrice;
+    
+        document.querySelector("#cart-subtotal p:nth-child(2)").innerText = subtotal.toFixed(2);
+    
+        document.querySelector("#cart-tax p:nth-child(2)").innerText = taxPrice.toFixed(2);
+        
+        document.querySelector("#cart-shipping p:nth-child(2)").innerText = shippingPrice.toFixed(2);
+    
+        document.querySelector("#cart-total").lastElementChild.innerText = cartTotal.toFixed(2);
+    
+    }
+    
+    
     
     
     

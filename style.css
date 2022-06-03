@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+header{
+    text-align: center;
+    font-size: 3rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart{
+    width: 340px;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.left{
+    width: 30%;
+}
+
+.left img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.backbag{
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.item p:nth-child(2){
+    color: orange;
+}
+
+.item p:nth-child(2) span{
+    color: black;
+    font-size: 0.8rem;
+}
+.counter{
+    display: flex;
+    gap: 12px;
+    margin-left: 5px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.counter i{
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove{
+    display: inline-block;
+    width: 35%;
+    padding: 1px;
+    margin-left: 25px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 4px;
+}
+.remove:hover{
+    cursor: pointer;
+}
+
+.shipping, .total{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+    border-top: 1px solid black;
+}
+
+form{
+    width: 340px;
+    margin-top: 25px;
+}
+
+label{
+    margin: 10px 0;
+    display: inline-block;
+}
+.input{
+    border: 1px solid black;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.shipping-address{
+    margin-top: 25px;
+}
+.input input, select{
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}
+
+.country{
+    width: max-content;
+}
+
+button{
+    border: none;
+    padding: 15px 20px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+.submit{
+    text-align: center;
+    position: relative;
+}
+
+
+@media (min-width: 750px){
+    main{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -20%);
+    }
+
+    .double{
+        display: flex;
+        gap: 10px;
+    }
+
+    .double input:nth-child(2){
+        width: 155px;
+        padding-left: 5px;
+    }
+
+    .input input, select{
+        margin-left: 5px;
+    }
+}
+
